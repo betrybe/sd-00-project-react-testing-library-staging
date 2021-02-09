@@ -36,7 +36,7 @@ class App extends Component {
 
   onUpdateFavoritePokemons(pokemonId, isFavorite) {
     updateFavoritePokemons(pokemonId, isFavorite);
-
+    console.log(pokemonId)//retirar isso
     this.setState(({ isPokemonFavoriteById: App.setIsPokemonFavoriteById() }));
   }
 
