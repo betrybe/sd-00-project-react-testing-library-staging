@@ -41,7 +41,7 @@ describe('FavoritePokemons.js', () => {
 
     // const pokemon = getByText(/Pikachu/i);
     // expect(pokemon).toBeInTheDocument();
-    const { getByText, getByLabelText } = render(
+    const { getByText } = render(
       <MemoryRouter>
         <FavoritePokemons pokemons={ pokemons } />
       </MemoryRouter>,
@@ -74,13 +74,13 @@ describe('FavoritePokemons.js', () => {
       ],
 
     }];
-    const { queryByText, getByLabelText } = render(
+    const { queryByText } = render(
       <MemoryRouter>
         <FavoritePokemons pokemons={ pokemon } />
       </MemoryRouter>,
     );
 
-    //queryBy evita que cuspa o erro, diferente de getBy
+    // queryBy evita que cuspa o erro, diferente de getBy
 
     const noFavorite = queryByText(/Charmander/i);
     expect(noFavorite).not.toBeInTheDocument();

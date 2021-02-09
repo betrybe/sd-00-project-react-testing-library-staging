@@ -1,6 +1,6 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { fireEvent, render, screen, waitForElement } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { About } from '../components';
 import App from '../App';
 
@@ -16,10 +16,10 @@ describe('About.js', () => {
   //   const heading = getByRole('heading', { level: 2 });
   //   // expect(title).toBeInTheDocument();
   //   expect(heading).toHaveTextContent(/About Pokédex/i);
-// })
+  //  })
 
   test('Verifica se a página contém informações da Pokédex', () => {
-    const { getByText, container, getByRole } = render(
+    const { getByText, getByRole } = render(
       <MemoryRouter initialEntries={ ['/'] }>
         <App />
       </MemoryRouter>,
