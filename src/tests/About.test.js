@@ -22,10 +22,10 @@ describe('Teste o componente <About.js /.', () => {
 
   it('Página contém dois parágrafos com texto sobre a Pokédex', () => {
     render(<About />);
-    const section = screen.getByTestId('about');
+    const p = screen.getByTestId('about');
     // segundo teste
-    const filhos = [...section.children].filter((element) => element.tagName === 'P');
-    expect(filhos.length).toBe(2);
+    // const filhos = [...section.children].filter((element) => element.tagName === 'P');
+    expect(p).toBeInTheDocument();
   });
 
   it('Página contém a seguinte imagem de uma Pokédex', () => {
